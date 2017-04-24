@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Remove Course</title>
+  </head>
+  <style media="screen">
+    body{
+      text-align: center;
+
+    }
+    a{
+      margin: 10px;
+    }
+  </style>
+  <body>
+    <h1>Are you sure you want to Remove the following course?</h1>
+    {% for course in courses %}
+      <p>Course Name:     {{course.name}}</p>
+      <p>Description:      {{course.description}}</p>
+
+      <a href="/clear/{{course.id}}" method="POST">Yes im sure</a>
+      <a href="/">No</a>
+    {% endfor %}
+
+  </body>
+</html>
